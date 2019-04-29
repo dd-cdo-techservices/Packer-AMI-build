@@ -9,7 +9,6 @@ pipeline {
   	    }
     	}
     
-    
     stage('Log Path Setup') {
       steps {
         sh 'PACKER_LOG=1'
@@ -19,7 +18,7 @@ pipeline {
     
     stage('Image Build') {
       steps {
-        sh './packr build image.json'
+        sh 'packer build image.json'
 	cleanWs()
       }
     }
