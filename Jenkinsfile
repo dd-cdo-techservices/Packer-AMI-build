@@ -15,16 +15,16 @@ pipeline {
 	sh 'PACKER_LOG_PATH="imagebuildlog.txt"'
       }
     }
-    
-	  stage('Packer version') {
+   
+    stage('Packer version') {
       steps {
-        sh 'packer --version'
+        sh './packr --version'
       }
     }
 	
     stage('Image Build') {
       steps {
-        sh 'packer build image.json'
+        sh './packr build image.json'
 	cleanWs()
       }
     }
