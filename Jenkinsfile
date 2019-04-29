@@ -13,7 +13,7 @@ pipeline {
     stage('Log Path Setup') {
       steps {
         sh 'PACKER_LOG=1'
-	sh 'PACKER_LOG_PATH="imagebuildlog.txt"
+	sh 'PACKER_LOG_PATH="imagebuildlog.txt"'
       }
     }
     
