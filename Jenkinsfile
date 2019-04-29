@@ -12,7 +12,7 @@ pipeline {
  
     stage('Packer version') {
       steps {
-        sh 'packer --version'
+        sh '/usr/bin/packer --version'
       }
     }
 	
