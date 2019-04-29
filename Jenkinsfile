@@ -16,6 +16,13 @@ pipeline {
       }
     }
     
+	  stage('Packer version') {
+      steps {
+        sh 'packer --version'
+	cleanWs()
+      }
+    }
+	
     stage('Image Build') {
       steps {
         sh 'packer build image.json'
