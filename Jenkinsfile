@@ -19,7 +19,7 @@ pipeline {
     
     stage('Image Build') {
       steps {
-        sh 'packr build image.json'
+        sh './packr build image.json'
 	cleanWs()
       }
     }
