@@ -19,7 +19,6 @@ pipeline {
 	  stage('Packer version') {
       steps {
         sh 'packer --version'
-	cleanWs()
       }
     }
 	
