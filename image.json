@@ -1,0 +1,41 @@
+{
+    "variables": {
+        "region":         "ap-south-1",
+                "aws_subnet_id": "subnet-0d073e6f90175113e",
+        "aws_vpc_id": "vpc-023ba5e6d4f9f34f8",
+        "aws_ami_name": "packer-test-ubuntu-ami-{{timestamp}}"
+    },
+    "builders": [
+        {
+            "ami_name": "{{user `aws_ami_name`}}",   
+   "instance_type": "t2.micro",
+            "region": "ap-south-1",
+   "source_ami_filter": {
+   "filters": {
+     "virtualization-type": "hvm",
+     "name": "Ubuntu-Base-*",
+     "root-device-type": "ebs"
+    },
+    "owners": [
+     "574515450298"
+    ],
+    "most_recent": true
+   },
+
+            "vpc_id": "{{user `aws_vpc_id`}}",
+            "subnet_id": "{{user `aws_subnet_id`}}",
+                        "associate_public_ip_address": "true",
+            "ssh_username": "ubuntu",
+            "type": "amazon-ebs",
+                        "communicator": "ssh"
+        }
+    ],
+   "provisioners": [
+
+         {
+      "type": "shell",
+      "script": "lamp.sh"
+      
+    }
+	]
+}
