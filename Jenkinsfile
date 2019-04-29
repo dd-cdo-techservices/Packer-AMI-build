@@ -18,7 +18,7 @@ pipeline {
    
     stage('Packer version') {
       steps {
-        sh './packr --version'
+        sh 'packr --version'
       }
     }
 	
