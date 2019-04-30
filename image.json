@@ -10,7 +10,19 @@
             "ami_name": "{{user `aws_ami_name`}}",   
    "instance_type": "t2.micro",
             "region": "ap-south-1",
-          "source_ami":"ami-0bf896617ac6a1d64",
+         
+		"source_ami_filter": {
+   "filters": {
+     "virtualization-type": "hvm",
+     "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*",
+     "root-device-type": "ebs"
+    },
+    "owners": [
+     "099720109477"
+    ],
+    "most_recent": true
+   },
+		
             "vpc_id": "{{user `aws_vpc_id`}}",
             "subnet_id": "{{user `aws_subnet_id`}}",
                         "associate_public_ip_address": "true",
