@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
-$MYSQLPASSWORD= "Password@123"
-$WPDBNAME= "blog"
+MYSQLPASSWORD= "Password@123"
+WPDBNAME= "blog"
 
-$WPUSER= "root" 
+WPUSER= "root" 
 
 WPPWD= "Password@123"
 
