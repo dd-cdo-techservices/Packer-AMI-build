@@ -43,7 +43,17 @@
 		]   
 	   },
 	   
-         {
+	   {
+  "type": "file",
+  "source": "id_rsa.pub",
+  "destination": "/tmp/id_rsa.pub"
+},
+{
+  "type": "shell",
+  "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/id_rsa.pub"
+},
+	   
+  {
       "type": "shell",
       "script": "lamp.sh"
       
