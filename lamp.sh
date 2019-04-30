@@ -18,7 +18,6 @@ echo "Installing Apache package now...\n"
 
 sudo apt-get -y install apache2
 
-checkerror $?
 
 #
 #Installing MySQL 5.7 which is available in default repo for Ubuntu 16.06
@@ -32,7 +31,6 @@ sudo apt-get -y install mysql-server-5.7 mysql-client
 
 #mysql -u root -p root -e "use mysql; UPDATE user SET authentication_string=PASSWORD('$MYSQLPASSWORD') WHERE User='root'; flush privileges;" >> $LOGFILE 2>&1
 
-checkerror $?
 
 
 #
@@ -43,7 +41,6 @@ echo "Installing PHP 7.0 now...\n"
 
 sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7.0 -y
 
-checkerror $?
 
 ################################################################################
 # End of Packer
