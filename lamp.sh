@@ -8,7 +8,7 @@ WPPWD="Password@123"
 
 echo "Updating repo information...\n"
 
-sudo apt-get -f autoremove
+sudo apt-get -y install -f
 sudo apt-get -y update 
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
