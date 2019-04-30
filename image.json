@@ -10,17 +10,7 @@
             "ami_name": "{{user `aws_ami_name`}}",   
    "instance_type": "t2.micro",
             "region": "ap-south-1",
-   "source_ami_filter": {
-   "filters": {
-     "virtualization-type": "hvm",
-     "name": "ubuntu-base-*",
-     "root-device-type": "ebs"
-    },
-    "owners": [
-     "574515450298"
-    ],
-    "most_recent": true
-   },
+           "source_ami": "ami-0bf896617ac6a1d64",
 
             "vpc_id": "{{user `aws_vpc_id`}}",
             "subnet_id": "{{user `aws_subnet_id`}}",
