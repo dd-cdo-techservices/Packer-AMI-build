@@ -7,11 +7,10 @@ $WPUSER= "root"
 
 WPPWD= "Password@123"
 
-sudo LOGFILE=./installlog.txt
 
 echo "Updating repo information...\n"
 
-sudo apt-get update >> $LOGFILE
+sudo apt-get update 
 
 #
 #Installing Apache2 package
@@ -19,7 +18,7 @@ sudo apt-get update >> $LOGFILE
 
 echo "Installing Apache package now...\n"
 
-sudo apt-get -y install apache2 >> $LOGFILE 2>&1
+sudo apt-get -y install apache2
 
 checkerror $?
 
@@ -31,7 +30,7 @@ echo "Installing MySQL 5.7 now...\n"
 
 sudo echo "mysql-server-5.7 mysql-server/root_password password Password@123" | sudo debconf-set-selections
 sudo echo "mysql-server-5.7 mysql-server/root_password_again password Password@123" | sudo debconf-set-selections
-sudo apt-get -y install mysql-server-5.7 mysql-client >> $LOGFILE 2>&1
+sudo apt-get -y install mysql-server-5.7 mysql-client
 
 #mysql -u root -p root -e "use mysql; UPDATE user SET authentication_string=PASSWORD('$MYSQLPASSWORD') WHERE User='root'; flush privileges;" >> $LOGFILE 2>&1
 
@@ -44,7 +43,7 @@ checkerror $?
 
 echo "Installing PHP 7.0 now...\n"
 
-sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7.0 -y >> $LOGFILE 2>&1
+sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7.0 -y
 
 checkerror $?
 
