@@ -1,75 +1,13 @@
 #!/bin/bash -e
 
+$MYSQLPASSWORD= "Password@123"
+$WPDBNAME= "blog"
 
+$WPUSER= "root" 
 
-#
-#Check if we have privileges
-#
+WPPWD= "Password@123"
 
-#if [ $(id -u) -ne 0 ]; then
-#	echo "Run this script as a Root user only" >&2
-#	exit 1
-#fi
-
-#
-# Getting IP from the system
-#
-
-IP=$(ip route get 8.8.8.8 | awk 'NR==1 {print $NF}')
-
-#
-#Check Error at any place and exit
-#
-
-checkerror() {
-
-RESULT=$1
-
-if [ $RESULT != 0 ];then
-echo "Errors occured while installing, Check $LOGFILE"
-exit 127
-fi
-
-}
-
-
-#
-# Fetching required vaiables to proceed
-#
-
-MYSQLPASSWORD=
-while [[ $MYSQLPASSWORD = "Password@123" ]]; do
-   read -p "Please insert the new MySQL Password for root: " MYSQLPASSWORD
-done
-
-checkerror $?
-
-
-WPDBNAME=
-while [[ $WPDBNAME = "blog1" ]]; do
-   read -p "Enter Wordpress Database name: " WPDBNAME
-done
-
-checkerror $?
-
-
-WPUSER=
-while [[ $WPUSER = "root" ]]; do
-   read -p "Enter Wordpress Mysql user : " WPUSER
-done
-
-checkerror $?
-
-WPPWD=
-while [[ $WPPWD = "Password@123" ]]; do
-   read -p "Enter Wordpress Mysql password for above user: " WPPWD
-done
-
-checkerror $?
-
-
-
-sudo LOGFILE=/root/installlog.txt
+sudo LOGFILE=./installlog.txt
 
 echo "Updating repo information...\n"
 
