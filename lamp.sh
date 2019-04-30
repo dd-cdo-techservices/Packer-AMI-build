@@ -9,6 +9,8 @@ WPPWD="Password@123"
 echo "Updating repo information...\n"
 
 sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
 
 #
 #Installing Apache2 package
