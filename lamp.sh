@@ -8,7 +8,6 @@ WPPWD="Password@123"
 
 echo "Updating repo information...\n"
 
-sudo apt-get -y install -f
 sudo apt-get -y update 
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
@@ -18,6 +17,7 @@ sudo apt-get -y dist-upgrade
 #
 
 echo "Installing Apache package now...\n"
+sudo apt-get purge apache2
 
 sudo apt-get -y install apache2
 
