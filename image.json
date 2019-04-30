@@ -3,7 +3,7 @@
         "region":         "ap-south-1",
                 "aws_subnet_id": "subnet-0d073e6f90175113e",
         "aws_vpc_id": "vpc-023ba5e6d4f9f34f8",
-        "aws_ami_name": "Ubuntu-Custom-AMI"
+        "aws_ami_name": "ubuntu-custom-AMI"
     },
     "builders": [
         {
