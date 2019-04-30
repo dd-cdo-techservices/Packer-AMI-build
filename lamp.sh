@@ -1,11 +1,9 @@
 #!/bin/bash -e
 
-MYSQLPASSWORD= "Password@123"
-WPDBNAME= "blog"
-
-WPUSER= "root" 
-
-WPPWD= "Password@123"
+MYSQLPASSWORD="Password@123"
+WPDBNAME="blog"
+WPUSER="root" 
+WPPWD="Password@123"
 
 
 echo "Updating repo information...\n"
