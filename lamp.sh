@@ -18,7 +18,8 @@ sudo apt-get -y dist-upgrade
 
 echo "Installing Apache package now...\n"
 sudo apt-get purge apache2
-
+sudo apt-get -y install apache2-bin
+sudo apt-get -y install apache2-utils
 sudo apt-get -y install apache2
 
 
