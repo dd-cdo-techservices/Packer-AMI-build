@@ -44,7 +44,7 @@
 	   {
 		"type": "shell",
 		"inline": [
-		   "sudo sed -i 's/us-east-2\\.ec2\\.//g' /etc/apt/sources.list"
+		   "sudo sed -i 's/ap-south-1\\.ec2\\.//g' /etc/apt/sources.list"
 		]   
 	   },
 	   
@@ -57,6 +57,7 @@
   "type": "shell",
   "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/id_rsa.pub"
 },
+	 
 	   
   {
       "type": "shell",
