@@ -16,7 +16,7 @@ pipeline {
       }
     }
 	
-    stage('Image Build') {
+    stage('Image Build & Encrypt') {
       steps {
         sh '/usr/bin/packer build image.json'
 	      cleanWs()
