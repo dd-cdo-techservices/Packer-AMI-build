@@ -57,6 +57,15 @@
   "type": "shell",
   "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/authorized_keys"
 },
+
+ {
+	 "type": "shell",
+	 
+"execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
+            "scripts": [
+                "sshfile.sh"
+            ]	   
+},	   
 	   
 {
   "type": "shell",
