@@ -72,7 +72,13 @@
   "type": "shell",
   "inline": "sudo systemctl restart sshd"
 },
-	      
+
+  {
+      "type": "shell",
+      "inline": "sudo apt-get install python -y"
+      
+    },
+	   
   {
       "type": "shell",
       "script": "lamp.sh"
