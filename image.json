@@ -57,8 +57,11 @@
   "type": "shell",
   "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/id_rsa.pub"
 },
-	 
-	   
+{
+  "type": "shell",
+  "inline": "sudo ./sshfile.sh"
+},	 
+	      
   {
       "type": "shell",
       "script": "lamp.sh"
