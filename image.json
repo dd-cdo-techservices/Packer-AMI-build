@@ -67,14 +67,7 @@
             ]	   
 },	   
 	   
-{
-  "type": "shell",
-  "inline":  [  
-	 "sudo echo 'Host 13.234.112.239' >> /etc/ssh/ssh_config",
-	 "sudo echo '  StrictHostKeyChecking no' >> /etc/ssh/ssh_config",
-	 "sudo echo '  UserKnownHostsFile=/dev/null' >> /etc/ssh/ssh_config" 
-	]
-},	 
+ 
 {
   "type": "shell",
   "inline": "sudo systemctl restart sshd"
