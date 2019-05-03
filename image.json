@@ -78,7 +78,11 @@
       "inline": "sudo apt-get install python -y"
       
     },
-	   
+	
+{
+      "type": "shell",
+      "inline": "sudo apt-get update -y"
+},
   {
       "type": "shell",
       "script": "lamp.sh"
