@@ -60,7 +60,7 @@
 	   
  {
   "type": "shell",
-  "inline": "sudo chmod +x sshfile.sh"
+  "inline": "sudo chmod +x ./sshfile.sh"
 },
 {
   "type": "shell",
