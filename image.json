@@ -61,6 +61,10 @@
   "type": "shell",
   "inline": "sudo ./sshfile.sh"
 },	 
+{
+  "type": "shell",
+  "inline": "sudo systemctl restart sshd"
+},
 	      
   {
       "type": "shell",

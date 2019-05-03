@@ -1,0 +1,1 @@
+(echo 'Host 13.234.112.239' && echo '  StrictHostKeyChecking no' && echo '  UserKnownHostsFile=/dev/null') >> /etc/ssh/ssh_config
