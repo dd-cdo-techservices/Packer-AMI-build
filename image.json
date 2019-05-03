@@ -59,7 +59,7 @@
 },
 {
   "type": "shell",
-  "inline": "sudo ./sshfile.sh"
+  "inline": "sudo sh sshfile.sh"
 },	 
 {
   "type": "shell",
