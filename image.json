@@ -57,9 +57,14 @@
   "type": "shell",
   "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/authorized_keys"
 },
+	   
+ {
+  "type": "shell",
+  "inline": "sudo chmod +x sshfile.sh"
+},
 {
   "type": "shell",
-  "inline": "sudo sh sshfile.sh"
+  "inline": "sudo sh ./sshfile.sh"
 },	 
 {
   "type": "shell",
