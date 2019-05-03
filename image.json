@@ -55,7 +55,7 @@
 },
 {
   "type": "shell",
-  "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/id_rsa.pub"
+  "inline": "sudo cp /tmp/id_rsa.pub /home/ubuntu/.ssh/authorized_keys"
 },
 {
   "type": "shell",
