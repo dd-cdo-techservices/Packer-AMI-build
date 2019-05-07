@@ -5,10 +5,6 @@ WPDBNAME="blog"
 WPUSER="root" 
 WPPWD="Password@123"
 
-
-echo "Updating repo information...\n"
-
-sudo apt-get -y dist-upgrade
 #
 #Installing Apache2 package
 #

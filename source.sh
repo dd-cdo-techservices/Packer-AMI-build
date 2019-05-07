@@ -1,0 +1,1 @@
+sudo sed -i 's/ap-south-1\.ec2\.//g' /etc/apt/sources.list
